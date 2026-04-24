@@ -1,0 +1,28 @@
+# Git
+.git
+.gitignore
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environments
+venv/
+env/
+.env
+*.env
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.code-workspace
+
+# Logs
+*.log
+
+# Temp files
+*.tmp
+*.bak
