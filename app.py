@@ -11,6 +11,7 @@ from facenet_pytorch import MTCNN, InceptionResnetV1
 from PIL import Image, ImageOps, ImageEnhance
 from functools import lru_cache
 import io
+from embeddings import extract_embedding_from_image
 
 # ==================== LOGGER SETUP ====================
 import logging
@@ -253,10 +254,16 @@ def verify():
         
         logger.info(f"[{request_id}] ✅ Données valides")
 
+
         profile_url = data['profile_url']
         face_b64    = data['face_image']
         card_id     = data.get('card_id', 'Inconnu')
         threshold   = data.get('threshold', 0.65)
+
+        
+        
+    
+      
 
         logger.debug(f"[{request_id}] 📋 Paramètres:")
         logger.debug(f"[{request_id}]   - card_id: {card_id}")
@@ -347,6 +354,37 @@ def verify():
         logger.error("=" * 80 + "\n")
         traceback.print_exc()
         return jsonify({"success": False, "error": "Erreur interne serveur"}), 500
+
+@app.route('/embed', methods=['POST'])
+def extract_embedding_route():
+    """Endpoint qui reçoit une image Base64 et retourne les embeddings."""
+    request_id = str(uuid.uuid4())[:8]
+    logger.info("=" * 80)
+    logger.info(f"[{request_id}] 📨 Nouvelle requête /embed")
+    logger.info("=" * 80)
+
+    data = request.json
+    if not data or 'image_base64' not in data:
+        logger.warning(f"[{request_id}] ⚠️ image_base64 manquante")
+        return jsonify({"error": "image_base64 manquante"}), 400
+
+    image_base64 = data['image_base64']
+    if "," in image_base64:
+        image_base64 = image_base64.split(",", 1)[1]
+
+    try:
+        embedding = extract_embedding_from_image(image_base64)
+        logger.info(f"[{request_id}] ✅ Embeddings extraits ({len(embedding)} dimensions)")
+        return jsonify({"embedding": embedding.tolist()}), 200
+
+    except ValueError as e:
+        logger.warning(f"[{request_id}] ⚠️ Erreur Base64 ou visage non détecté: {str(e)}")
+        return jsonify({"error": str(e)}), 400
+
+    except Exception as e:
+        logger.error(f"[{request_id}] ❌ Erreur interne /embed: {str(e)}", exc_info=True)
+        return jsonify({"error": "Erreur interne serveur"}), 500
+
 
 @app.route('/health', methods=['GET'])
 @app.route('/', methods=['GET'])

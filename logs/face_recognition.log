@@ -65,3 +65,115 @@
 [32m[2026-05-06 10:42:03.463] [  INFO  ] [FaceRecognition:verify:333] [0m[5f02316d] 📈 Stats session: 0/1 acceptées, 1 rejetées, 0 sans visage
 [32m[2026-05-06 10:42:03.464] [  INFO  ] [FaceRecognition:verify:334] [0m================================================================================
 
+[32m[2026-05-06 12:39:29.601] [  INFO  ] [FaceRecognition:<module>:120] [0m
+[32m[2026-05-06 12:39:29.603] [  INFO  ] [FaceRecognition:<module>:121] [0m================================================================================
+[32m[2026-05-06 12:39:29.604] [  INFO  ] [FaceRecognition:<module>:122] [0m🚀 RECONNAISSANCE FACIALE — INITIALISATION
+[32m[2026-05-06 12:39:29.605] [  INFO  ] [FaceRecognition:<module>:123] [0m================================================================================
+[32m[2026-05-06 12:39:29.607] [  INFO  ] [FaceRecognition:<module>:124] [0m🖥️  Périphérique : cuda
+[36m[2026-05-06 12:39:29.607] [ DEBUG  ] [FaceRecognition:<module>:127] [0m📦 Chargement MTCNN...
+[32m[2026-05-06 12:39:29.759] [  INFO  ] [FaceRecognition:<module>:129] [0m✅ MTCNN chargé
+[36m[2026-05-06 12:39:29.760] [ DEBUG  ] [FaceRecognition:<module>:131] [0m📦 Chargement InceptionResnetV1...
+[32m[2026-05-06 12:39:30.150] [  INFO  ] [FaceRecognition:<module>:133] [0m✅ ResNet chargé
+[32m[2026-05-06 12:39:30.152] [  INFO  ] [FaceRecognition:<module>:135] [0m================================================================================
+[32m[2026-05-06 12:39:30.153] [  INFO  ] [FaceRecognition:<module>:136] [0m✅ Modèles IA chargés et prêts !
+[32m[2026-05-06 12:39:30.153] [  INFO  ] [FaceRecognition:<module>:137] [0m================================================================================
+
+[32m[2026-05-06 12:39:30.154] [  INFO  ] [FaceRecognition:<module>:415] [0m🚀 Démarrage du serveur Flask...
+[32m[2026-05-06 12:39:30.155] [  INFO  ] [FaceRecognition:<module>:416] [0m📍 http://0.0.0.0:5000
+[33m[2026-05-06 12:39:41.210] [WARNING ] [FaceRecognition:not_found:404] [0m404 - Route non trouvée: /embd
+[33m[2026-05-06 12:40:17.883] [WARNING ] [FaceRecognition:not_found:404] [0m404 - Route non trouvée: /embd
+[32m[2026-05-06 12:41:09.017] [  INFO  ] [FaceRecognition:extract_embedding_route:362] [0m================================================================================
+[32m[2026-05-06 12:41:09.019] [  INFO  ] [FaceRecognition:extract_embedding_route:363] [0m[0c252215] 📨 Nouvelle requête /embed
+[32m[2026-05-06 12:41:09.020] [  INFO  ] [FaceRecognition:extract_embedding_route:364] [0m================================================================================
+[32m[2026-05-06 12:41:11.403] [  INFO  ] [FaceRecognition:extract_embedding_route:377] [0m[0c252215] ✅ Embeddings extraits (512 dimensions)
+[32m[2026-05-06 12:45:53.201] [  INFO  ] [FaceRecognition:extract_embedding_route:362] [0m================================================================================
+[32m[2026-05-06 12:45:53.202] [  INFO  ] [FaceRecognition:extract_embedding_route:363] [0m[e7301c81] 📨 Nouvelle requête /embed
+[32m[2026-05-06 12:45:53.203] [  INFO  ] [FaceRecognition:extract_embedding_route:364] [0m================================================================================
+[32m[2026-05-06 12:45:53.624] [  INFO  ] [FaceRecognition:extract_embedding_route:377] [0m[e7301c81] ✅ Embeddings extraits (512 dimensions)
+[32m[2026-05-06 12:46:23.867] [  INFO  ] [FaceRecognition:extract_embedding_route:362] [0m================================================================================
+[32m[2026-05-06 12:46:23.867] [  INFO  ] [FaceRecognition:extract_embedding_route:363] [0m[64de0ef6] 📨 Nouvelle requête /embed
+[32m[2026-05-06 12:46:23.869] [  INFO  ] [FaceRecognition:extract_embedding_route:364] [0m================================================================================
+[32m[2026-05-06 12:46:24.256] [  INFO  ] [FaceRecognition:extract_embedding_route:377] [0m[64de0ef6] ✅ Embeddings extraits (512 dimensions)
+[32m[2026-05-06 12:46:29.419] [  INFO  ] [FaceRecognition:extract_embedding_route:362] [0m================================================================================
+[32m[2026-05-06 12:46:29.419] [  INFO  ] [FaceRecognition:extract_embedding_route:363] [0m[012d3d12] 📨 Nouvelle requête /embed
+[32m[2026-05-06 12:46:29.420] [  INFO  ] [FaceRecognition:extract_embedding_route:364] [0m================================================================================
+[32m[2026-05-06 12:46:29.851] [  INFO  ] [FaceRecognition:extract_embedding_route:377] [0m[012d3d12] ✅ Embeddings extraits (512 dimensions)
+[32m[2026-05-06 12:49:14.157] [  INFO  ] [FaceRecognition:<module>:120] [0m
+[32m[2026-05-06 12:49:14.158] [  INFO  ] [FaceRecognition:<module>:121] [0m================================================================================
+[32m[2026-05-06 12:49:14.159] [  INFO  ] [FaceRecognition:<module>:122] [0m🚀 RECONNAISSANCE FACIALE — INITIALISATION
+[32m[2026-05-06 12:49:14.159] [  INFO  ] [FaceRecognition:<module>:123] [0m================================================================================
+[32m[2026-05-06 12:49:14.161] [  INFO  ] [FaceRecognition:<module>:124] [0m🖥️  Périphérique : cuda
+[36m[2026-05-06 12:49:14.161] [ DEBUG  ] [FaceRecognition:<module>:127] [0m📦 Chargement MTCNN...
+[32m[2026-05-06 12:49:14.263] [  INFO  ] [FaceRecognition:<module>:129] [0m✅ MTCNN chargé
+[36m[2026-05-06 12:49:14.264] [ DEBUG  ] [FaceRecognition:<module>:131] [0m📦 Chargement InceptionResnetV1...
+[32m[2026-05-06 12:49:14.614] [  INFO  ] [FaceRecognition:<module>:133] [0m✅ ResNet chargé
+[32m[2026-05-06 12:49:14.615] [  INFO  ] [FaceRecognition:<module>:135] [0m================================================================================
+[32m[2026-05-06 12:49:14.615] [  INFO  ] [FaceRecognition:<module>:136] [0m✅ Modèles IA chargés et prêts !
+[32m[2026-05-06 12:49:14.616] [  INFO  ] [FaceRecognition:<module>:137] [0m================================================================================
+
+[32m[2026-05-06 12:49:14.617] [  INFO  ] [FaceRecognition:<module>:415] [0m🚀 Démarrage du serveur Flask...
+[32m[2026-05-06 12:49:14.618] [  INFO  ] [FaceRecognition:<module>:416] [0m📍 http://0.0.0.0:5000
+[32m[2026-05-06 12:49:48.777] [  INFO  ] [FaceRecognition:verify:234] [0m================================================================================
+[32m[2026-05-06 12:49:48.779] [  INFO  ] [FaceRecognition:verify:235] [0m[ed9cc773] 📨 Nouvelle requête /verify
+[32m[2026-05-06 12:49:48.779] [  INFO  ] [FaceRecognition:verify:236] [0m================================================================================
+[36m[2026-05-06 12:49:48.780] [ DEBUG  ] [FaceRecognition:verify:240] [0m[ed9cc773] 🔍 Validation des données...
+[32m[2026-05-06 12:49:48.781] [  INFO  ] [FaceRecognition:verify:255] [0m[ed9cc773] ✅ Données valides
+[36m[2026-05-06 12:49:48.781] [ DEBUG  ] [FaceRecognition:verify:268] [0m[ed9cc773] 📋 Paramètres:
+[36m[2026-05-06 12:49:48.782] [ DEBUG  ] [FaceRecognition:verify:269] [0m[ed9cc773]   - card_id: 11223344
+[36m[2026-05-06 12:49:48.784] [ DEBUG  ] [FaceRecognition:verify:270] [0m[ed9cc773]   - threshold: 0.65
+[36m[2026-05-06 12:49:48.785] [ DEBUG  ] [FaceRecognition:verify:271] [0m[ed9cc773]   - profile_url: http://172.16.1.20:8000/storage/companies/imrasoft/documents/employee/face_image_J312012.png
+[36m[2026-05-06 12:49:48.786] [ DEBUG  ] [FaceRecognition:verify:272] [0m[ed9cc773]   - face_image: 100884 chars
+[36m[2026-05-06 12:49:48.786] [ DEBUG  ] [FaceRecognition:verify:275] [0m[ed9cc773] 🔧 Nettoyage Base64...
+[36m[2026-05-06 12:49:48.787] [ DEBUG  ] [FaceRecognition:verify:281] [0m[ed9cc773] 📸 Décodage selfie...
+[36m[2026-05-06 12:49:48.788] [ DEBUG  ] [FaceRecognition:verify:284] [0m[ed9cc773] ✅ Décodage Base64 OK (75661 bytes)
+[36m[2026-05-06 12:49:48.788] [ DEBUG  ] [FaceRecognition:verify:289] [0m[ed9cc773] 🖼️ Chargement image capturée...
+[36m[2026-05-06 12:49:48.806] [ DEBUG  ] [FaceRecognition:verify:292] [0m[ed9cc773] ✅ Image chargée: (600, 800)
+[36m[2026-05-06 12:49:48.806] [ DEBUG  ] [FaceRecognition:verify:297] [0m[ed9cc773] 🧠 Extraction embedding selfie...
+[36m[2026-05-06 12:49:48.807] [ DEBUG  ] [FaceRecognition:extract_embedding:189] [0m[ed9cc773] 🔄 Correction EXIF...
+[36m[2026-05-06 12:49:48.808] [ DEBUG  ] [FaceRecognition:extract_embedding:193] [0m[ed9cc773] 📐 Taille originale: (600, 800)
+[36m[2026-05-06 12:49:48.808] [ DEBUG  ] [FaceRecognition:extract_embedding:201] [0m[ed9cc773] 🎯 Détection MTCNN...
+[32m[2026-05-06 12:49:49.467] [  INFO  ] [FaceRecognition:extract_embedding:208] [0m[ed9cc773] ✅ 1 visage(s) détecté(s)
+[36m[2026-05-06 12:49:49.468] [ DEBUG  ] [FaceRecognition:extract_embedding:209] [0m[ed9cc773] 📊 Confiances: ['100.00%']
+[36m[2026-05-06 12:49:49.469] [ DEBUG  ] [FaceRecognition:extract_embedding:211] [0m[ed9cc773] 🎬 Extraction du premier visage...
+[36m[2026-05-06 12:49:49.478] [ DEBUG  ] [FaceRecognition:extract_embedding:213] [0m[ed9cc773] ✅ Visage extrait: torch.Size([3, 160, 160])
+[36m[2026-05-06 12:49:49.478] [ DEBUG  ] [FaceRecognition:extract_embedding:215] [0m[ed9cc773] 🧠 Calcul embedding ResNet...
+[32m[2026-05-06 12:49:49.653] [  INFO  ] [FaceRecognition:extract_embedding:220] [0m[ed9cc773] ✅ Embedding généré (512 dimensions)
+[32m[2026-05-06 12:49:49.654] [  INFO  ] [FaceRecognition:verify:305] [0m[ed9cc773] ✅ Embedding selfie généré
+[36m[2026-05-06 12:49:49.656] [ DEBUG  ] [FaceRecognition:verify:308] [0m[ed9cc773] 📥 Récupération profil...
+[36m[2026-05-06 12:49:49.657] [ DEBUG  ] [FaceRecognition:get_cached_profile_embedding:150] [0m[2669cb64] 📥 Récupération profil: http://172.16.1.20:8000/storage/companies/imrasoft/documents/employee/face_image_J312012.png
+[36m[2026-05-06 12:49:49.658] [ DEBUG  ] [FaceRecognition:get_cached_profile_embedding:153] [0m[2669cb64] 🌐 Requête HTTP...
+[36m[2026-05-06 12:49:49.719] [ DEBUG  ] [FaceRecognition:get_cached_profile_embedding:160] [0m[2669cb64] ✅ Réponse reçue (324083 bytes)
+[36m[2026-05-06 12:49:49.720] [ DEBUG  ] [FaceRecognition:get_cached_profile_embedding:162] [0m[2669cb64] 🖼️ Chargement image...
+[36m[2026-05-06 12:49:49.735] [ DEBUG  ] [FaceRecognition:get_cached_profile_embedding:164] [0m[2669cb64] ✅ Image chargée: (800, 800)
+[36m[2026-05-06 12:49:49.736] [ DEBUG  ] [FaceRecognition:get_cached_profile_embedding:166] [0m[2669cb64] 🧠 Extraction embedding...
+[36m[2026-05-06 12:49:49.736] [ DEBUG  ] [FaceRecognition:extract_embedding:189] [0m[2669cb64] 🔄 Correction EXIF...
+[36m[2026-05-06 12:49:49.738] [ DEBUG  ] [FaceRecognition:extract_embedding:193] [0m[2669cb64] 📐 Taille originale: (800, 800)
+[36m[2026-05-06 12:49:49.739] [ DEBUG  ] [FaceRecognition:extract_embedding:201] [0m[2669cb64] 🎯 Détection MTCNN...
+[32m[2026-05-06 12:49:49.904] [  INFO  ] [FaceRecognition:extract_embedding:208] [0m[2669cb64] ✅ 1 visage(s) détecté(s)
+[36m[2026-05-06 12:49:49.904] [ DEBUG  ] [FaceRecognition:extract_embedding:209] [0m[2669cb64] 📊 Confiances: ['100.00%']
+[36m[2026-05-06 12:49:49.905] [ DEBUG  ] [FaceRecognition:extract_embedding:211] [0m[2669cb64] 🎬 Extraction du premier visage...
+[36m[2026-05-06 12:49:49.907] [ DEBUG  ] [FaceRecognition:extract_embedding:213] [0m[2669cb64] ✅ Visage extrait: torch.Size([3, 160, 160])
+[36m[2026-05-06 12:49:49.908] [ DEBUG  ] [FaceRecognition:extract_embedding:215] [0m[2669cb64] 🧠 Calcul embedding ResNet...
+[32m[2026-05-06 12:49:49.946] [  INFO  ] [FaceRecognition:extract_embedding:220] [0m[2669cb64] ✅ Embedding généré (512 dimensions)
+[32m[2026-05-06 12:49:49.947] [  INFO  ] [FaceRecognition:get_cached_profile_embedding:170] [0m[2669cb64] ✅ Profil traité avec succès
+[32m[2026-05-06 12:49:49.948] [  INFO  ] [FaceRecognition:verify:315] [0m[ed9cc773] ✅ Profil chargé
+[36m[2026-05-06 12:49:49.949] [ DEBUG  ] [FaceRecognition:verify:318] [0m[ed9cc773] 🔢 Calcul similarité (cosinus)...
+[36m[2026-05-06 12:49:49.951] [ DEBUG  ] [FaceRecognition:verify:321] [0m[ed9cc773] ✅ Similarité calculée: 0.2068
+[36m[2026-05-06 12:49:49.952] [ DEBUG  ] [FaceRecognition:verify:327] [0m[ed9cc773] 📊 Threshold: 0.65 | Résultat: 0.2068 >= 0.65 = False
+[33m[2026-05-06 12:49:49.954] [WARNING ] [FaceRecognition:verify:336] [0m[ed9cc773] ❌ VÉRIFICATION REJETÉE
+[32m[2026-05-06 12:49:49.954] [  INFO  ] [FaceRecognition:verify:339] [0m[ed9cc773] ⏱️  Temps total: 1177ms
+[32m[2026-05-06 12:49:49.956] [  INFO  ] [FaceRecognition:verify:340] [0m[ed9cc773] 📈 Stats session: 0/1 acceptées, 1 rejetées, 0 sans visage
+[32m[2026-05-06 12:49:49.958] [  INFO  ] [FaceRecognition:verify:341] [0m================================================================================
+
+[32m[2026-05-06 12:55:52.563] [  INFO  ] [FaceRecognition:extract_embedding_route:362] [0m================================================================================
+[32m[2026-05-06 12:55:52.564] [  INFO  ] [FaceRecognition:extract_embedding_route:363] [0m[3269c289] 📨 Nouvelle requête /embed
+[32m[2026-05-06 12:55:52.565] [  INFO  ] [FaceRecognition:extract_embedding_route:364] [0m================================================================================
+[32m[2026-05-06 12:55:53.604] [  INFO  ] [FaceRecognition:extract_embedding_route:377] [0m[3269c289] ✅ Embeddings extraits (512 dimensions)
+[32m[2026-05-06 14:46:50.447] [  INFO  ] [FaceRecognition:extract_embedding_route:362] [0m================================================================================
+[32m[2026-05-06 14:46:50.459] [  INFO  ] [FaceRecognition:extract_embedding_route:363] [0m[24924a26] 📨 Nouvelle requête /embed
+[32m[2026-05-06 14:46:50.460] [  INFO  ] [FaceRecognition:extract_embedding_route:364] [0m================================================================================
+[32m[2026-05-06 14:46:51.190] [  INFO  ] [FaceRecognition:extract_embedding_route:377] [0m[24924a26] ✅ Embeddings extraits (512 dimensions)
+[32m[2026-05-06 14:46:55.710] [  INFO  ] [FaceRecognition:extract_embedding_route:362] [0m================================================================================
+[32m[2026-05-06 14:46:55.710] [  INFO  ] [FaceRecognition:extract_embedding_route:363] [0m[dba9c735] 📨 Nouvelle requête /embed
+[32m[2026-05-06 14:46:55.711] [  INFO  ] [FaceRecognition:extract_embedding_route:364] [0m================================================================================
+[32m[2026-05-06 14:46:56.057] [  INFO  ] [FaceRecognition:extract_embedding_route:377] [0m[dba9c735] ✅ Embeddings extraits (512 dimensions)
