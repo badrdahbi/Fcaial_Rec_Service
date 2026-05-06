@@ -1,7 +1,6 @@
 import base64
 import numpy as np
 import torch
-import requests
 import time
 import traceback
 import uuid
@@ -9,7 +8,6 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from facenet_pytorch import MTCNN, InceptionResnetV1
 from PIL import Image, ImageOps, ImageEnhance
-from functools import lru_cache
 import io
 from embeddings import extract_embedding_from_image
 
@@ -143,45 +141,35 @@ except Exception as e:
 # Statistiques de session
 stats = {"total": 0, "accepted": 0, "rejected": 0, "no_face": 0}
 
-@lru_cache(maxsize=100)
-def get_cached_profile_embedding(profile_url):
-    """Télécharge et extrait l'ID visage d'une URL avec cache."""
-    request_id = str(uuid.uuid4())[:8]
-    logger.debug(f"[{request_id}] 📥 Récupération profil: {profile_url}")
+
+# ======================================================
+# SUPPRIMÉ : get_cached_profile_embedding(profile_url)
+#   → Plus besoin de télécharger depuis une URL
+#   → Le profil arrive directement en Base64 (profile_image)
+# ======================================================
+
+
+def decode_base64_image(b64_string, label, request_id):
+    """Décode une image Base64 en objet PIL Image."""
+    if "," in b64_string:
+        b64_string = b64_string.split(",")[1]
+        logger.debug(f"[{request_id}] ✅ Data URI nettoyé ({label})")
     
     try:
-        logger.debug(f"[{request_id}] 🌐 Requête HTTP...")
-        resp = requests.get(profile_url, timeout=10)
-        
-        if resp.status_code != 200:
-            logger.error(f"[{request_id}] ❌ HTTP {resp.status_code}")
-            return "ERR_HTTP", None
-        
-        logger.debug(f"[{request_id}] ✅ Réponse reçue ({len(resp.content)} bytes)")
-        
-        logger.debug(f"[{request_id}] 🖼️ Chargement image...")
-        img = Image.open(io.BytesIO(resp.content)).convert('RGB')
-        logger.debug(f"[{request_id}] ✅ Image chargée: {img.size}")
-        
-        logger.debug(f"[{request_id}] 🧠 Extraction embedding...")
-        emb = extract_embedding(img, request_id)
-        
-        if emb is not None:
-            logger.info(f"[{request_id}] ✅ Profil traité avec succès")
-            return (emb, None)
-        else:
-            logger.warning(f"[{request_id}] ⚠️ Aucun visage détecté dans profil")
-            return ("ERR_NO_FACE", None)
-            
-    except requests.Timeout:
-        logger.error(f"[{request_id}] ❌ Timeout réseau (10s dépassé)")
-        return "ERR_TIMEOUT", None
-    except requests.RequestException as e:
-        logger.error(f"[{request_id}] ❌ Erreur réseau: {str(e)}")
-        return "ERR_NETWORK", str(e)
+        img_bytes = base64.b64decode(b64_string)
+        logger.debug(f"[{request_id}] ✅ Décodage Base64 OK ({label}: {len(img_bytes)} bytes)")
     except Exception as e:
-        logger.error(f"[{request_id}] ❌ Erreur inattendue: {str(e)}", exc_info=True)
-        return "ERR_UNKNOWN", str(e)
+        logger.error(f"[{request_id}] ❌ Erreur décodage Base64 ({label}): {str(e)}")
+        return None, "Format Base64 invalide"
+    
+    try:
+        img = Image.open(io.BytesIO(img_bytes)).convert('RGB')
+        logger.debug(f"[{request_id}] ✅ Image chargée ({label}): {img.size}")
+        return img, None
+    except Exception as e:
+        logger.error(f"[{request_id}] ❌ Format image invalide ({label}): {str(e)}")
+        return None, "Format image invalide"
+
 
 def extract_embedding(img, request_id=""):
     """Extrait l'empreinte mathématique d'un visage."""
@@ -248,52 +236,30 @@ def verify():
             logger.warning(f"[{request_id}] ⚠️ face_image manquant")
             return jsonify({"error": "face_image manquant"}), 400
         
-        if 'profile_url' not in data:
-            logger.warning(f"[{request_id}] ⚠️ profile_url manquant")
-            return jsonify({"error": "profile_url manquant"}), 400
+        # ✅ MODIFIÉ : on attend profile_image (Base64) au lieu de profile_url
+        if 'profile_image' not in data:
+            logger.warning(f"[{request_id}] ⚠️ profile_image manquant")
+            return jsonify({"error": "profile_image manquant"}), 400
         
         logger.info(f"[{request_id}] ✅ Données valides")
 
-
-        profile_url = data['profile_url']
+        profile_b64 = data['profile_image']
         face_b64    = data['face_image']
         card_id     = data.get('card_id', 'Inconnu')
         threshold   = data.get('threshold', 0.65)
 
-        
-        
-    
-      
-
         logger.debug(f"[{request_id}] 📋 Paramètres:")
         logger.debug(f"[{request_id}]   - card_id: {card_id}")
         logger.debug(f"[{request_id}]   - threshold: {threshold}")
-        logger.debug(f"[{request_id}]   - profile_url: {profile_url}")
+        logger.debug(f"[{request_id}]   - profile_image: {len(profile_b64)} chars")
         logger.debug(f"[{request_id}]   - face_image: {len(face_b64)} chars")
 
-        # Nettoyage Base64
-        logger.debug(f"[{request_id}] 🔧 Nettoyage Base64...")
-        if "," in face_b64:
-            face_b64 = face_b64.split(",")[1]
-            logger.debug(f"[{request_id}] ✅ Data URI nettoyé")
-        
-        # 1. Traitement Selfie
+        # 1. Traitement Selfie (caméra)
         logger.debug(f"[{request_id}] 📸 Décodage selfie...")
-        try:
-            captured_bytes = base64.b64decode(face_b64)
-            logger.debug(f"[{request_id}] ✅ Décodage Base64 OK ({len(captured_bytes)} bytes)")
-        except Exception as e:
-            logger.error(f"[{request_id}] ❌ Erreur décodage Base64: {str(e)}")
-            return jsonify({"error": "Format Base64 invalide"}), 400
-        
-        logger.debug(f"[{request_id}] 🖼️ Chargement image capturée...")
-        try:
-            captured_img = Image.open(io.BytesIO(captured_bytes)).convert('RGB')
-            logger.debug(f"[{request_id}] ✅ Image chargée: {captured_img.size}")
-        except Exception as e:
-            logger.error(f"[{request_id}] ❌ Format image invalide: {str(e)}")
-            return jsonify({"error": "Format image invalide"}), 400
-        
+        captured_img, err = decode_base64_image(face_b64, "selfie", request_id)
+        if captured_img is None:
+            return jsonify({"error": err}), 400
+
         logger.debug(f"[{request_id}] 🧠 Extraction embedding selfie...")
         captured_emb = extract_embedding(captured_img, request_id)
 
@@ -304,20 +270,25 @@ def verify():
 
         logger.info(f"[{request_id}] ✅ Embedding selfie généré")
 
-        # 2. Récupération Profil
-        logger.debug(f"[{request_id}] 📥 Récupération profil...")
-        profile_res, err = get_cached_profile_embedding(profile_url)
-        
-        if isinstance(profile_res, str):
-            logger.error(f"[{request_id}] ❌ Erreur profil: {profile_res}")
-            return jsonify({"success": False, "error": f"Erreur profil: {profile_res}"}), 400
+        # 2. ✅ MODIFIÉ : Traitement Profil depuis Base64 (plus de téléchargement HTTP)
+        logger.debug(f"[{request_id}] 🖼️ Décodage image de profil (Base64)...")
+        profile_img, err = decode_base64_image(profile_b64, "profil", request_id)
+        if profile_img is None:
+            return jsonify({"error": err}), 400
 
-        logger.info(f"[{request_id}] ✅ Profil chargé")
+        logger.debug(f"[{request_id}] 🧠 Extraction embedding profil...")
+        profile_emb = extract_embedding(profile_img, request_id)
+
+        if profile_emb is None:
+            logger.warning(f"[{request_id}] ⚠️ Aucun visage détecté dans l'image de profil")
+            return jsonify({"success": False, "error": "Aucun visage détecté dans l'image de profil"}), 200
+
+        logger.info(f"[{request_id}] ✅ Profil traité")
 
         # 3. Comparaison
         logger.debug(f"[{request_id}] 🔢 Calcul similarité (cosinus)...")
         try:
-            similarity = np.dot(profile_res, captured_emb) / (np.linalg.norm(profile_res) * np.linalg.norm(captured_emb))
+            similarity = np.dot(profile_emb, captured_emb) / (np.linalg.norm(profile_emb) * np.linalg.norm(captured_emb))
             logger.debug(f"[{request_id}] ✅ Similarité calculée: {similarity:.4f}")
         except Exception as e:
             logger.error(f"[{request_id}] ❌ Erreur calcul similarité: {str(e)}", exc_info=True)
