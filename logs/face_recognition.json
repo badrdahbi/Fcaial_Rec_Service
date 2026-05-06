@@ -1,0 +1,65 @@
+{"message": "", "timestamp": "2026-05-06T09:41:05.297700", "module": "FaceRecognition", "function": "<module>", "line": 119, "level": "INFO"}
+{"message": "================================================================================", "timestamp": "2026-05-06T09:41:05.297700", "module": "FaceRecognition", "function": "<module>", "line": 120, "level": "INFO"}
+{"message": "\ud83d\ude80 RECONNAISSANCE FACIALE \u2014 INITIALISATION", "timestamp": "2026-05-06T09:41:05.299211", "module": "FaceRecognition", "function": "<module>", "line": 121, "level": "INFO"}
+{"message": "================================================================================", "timestamp": "2026-05-06T09:41:05.299211", "module": "FaceRecognition", "function": "<module>", "line": 122, "level": "INFO"}
+{"message": "\ud83d\udda5\ufe0f  P\u00e9riph\u00e9rique : cuda", "timestamp": "2026-05-06T09:41:05.301222", "module": "FaceRecognition", "function": "<module>", "line": 123, "level": "INFO"}
+{"message": "\ud83d\udce6 Chargement MTCNN...", "timestamp": "2026-05-06T09:41:05.301222", "module": "FaceRecognition", "function": "<module>", "line": 126, "level": "DEBUG"}
+{"message": "\u2705 MTCNN charg\u00e9", "timestamp": "2026-05-06T09:41:05.548328", "module": "FaceRecognition", "function": "<module>", "line": 128, "level": "INFO"}
+{"message": "\ud83d\udce6 Chargement InceptionResnetV1...", "timestamp": "2026-05-06T09:41:05.549425", "module": "FaceRecognition", "function": "<module>", "line": 130, "level": "DEBUG"}
+{"message": "\u2705 ResNet charg\u00e9", "timestamp": "2026-05-06T09:41:06.009436", "module": "FaceRecognition", "function": "<module>", "line": 132, "level": "INFO"}
+{"message": "================================================================================", "timestamp": "2026-05-06T09:41:06.009958", "module": "FaceRecognition", "function": "<module>", "line": 134, "level": "INFO"}
+{"message": "\u2705 Mod\u00e8les IA charg\u00e9s et pr\u00eats !", "timestamp": "2026-05-06T09:41:06.010973", "module": "FaceRecognition", "function": "<module>", "line": 135, "level": "INFO"}
+{"message": "================================================================================\n", "timestamp": "2026-05-06T09:41:06.011970", "module": "FaceRecognition", "function": "<module>", "line": 136, "level": "INFO"}
+{"message": "\ud83d\ude80 D\u00e9marrage du serveur Flask...", "timestamp": "2026-05-06T09:41:06.014471", "module": "FaceRecognition", "function": "<module>", "line": 377, "level": "INFO"}
+{"message": "\ud83d\udccd http://0.0.0.0:5000", "timestamp": "2026-05-06T09:41:06.015251", "module": "FaceRecognition", "function": "<module>", "line": 378, "level": "INFO"}
+{"message": "================================================================================", "timestamp": "2026-05-06T09:42:00.928948", "module": "FaceRecognition", "function": "verify", "line": 233, "level": "INFO"}
+{"message": "[5f02316d] \ud83d\udce8 Nouvelle requ\u00eate /verify", "timestamp": "2026-05-06T09:42:00.929960", "module": "FaceRecognition", "function": "verify", "line": 234, "level": "INFO"}
+{"message": "================================================================================", "timestamp": "2026-05-06T09:42:00.929960", "module": "FaceRecognition", "function": "verify", "line": 235, "level": "INFO"}
+{"message": "[5f02316d] \ud83d\udd0d Validation des donn\u00e9es...", "timestamp": "2026-05-06T09:42:00.930958", "module": "FaceRecognition", "function": "verify", "line": 239, "level": "DEBUG"}
+{"message": "[5f02316d] \u2705 Donn\u00e9es valides", "timestamp": "2026-05-06T09:42:00.932467", "module": "FaceRecognition", "function": "verify", "line": 254, "level": "INFO"}
+{"message": "[5f02316d] \ud83d\udccb Param\u00e8tres:", "timestamp": "2026-05-06T09:42:00.933479", "module": "FaceRecognition", "function": "verify", "line": 261, "level": "DEBUG"}
+{"message": "[5f02316d]   - card_id: 11223344", "timestamp": "2026-05-06T09:42:00.934481", "module": "FaceRecognition", "function": "verify", "line": 262, "level": "DEBUG"}
+{"message": "[5f02316d]   - threshold: 0.65", "timestamp": "2026-05-06T09:42:00.934481", "module": "FaceRecognition", "function": "verify", "line": 263, "level": "DEBUG"}
+{"message": "[5f02316d]   - profile_url: http://172.16.1.20:8000/storage/companies/imrasoft/documents/employee/face_image_J312012.png", "timestamp": "2026-05-06T09:42:00.935990", "module": "FaceRecognition", "function": "verify", "line": 264, "level": "DEBUG"}
+{"message": "[5f02316d]   - face_image: 100884 chars", "timestamp": "2026-05-06T09:42:00.936511", "module": "FaceRecognition", "function": "verify", "line": 265, "level": "DEBUG"}
+{"message": "[5f02316d] \ud83d\udd27 Nettoyage Base64...", "timestamp": "2026-05-06T09:42:00.937517", "module": "FaceRecognition", "function": "verify", "line": 268, "level": "DEBUG"}
+{"message": "[5f02316d] \ud83d\udcf8 D\u00e9codage selfie...", "timestamp": "2026-05-06T09:42:00.937517", "module": "FaceRecognition", "function": "verify", "line": 274, "level": "DEBUG"}
+{"message": "[5f02316d] \u2705 D\u00e9codage Base64 OK (75661 bytes)", "timestamp": "2026-05-06T09:42:00.938573", "module": "FaceRecognition", "function": "verify", "line": 277, "level": "DEBUG"}
+{"message": "[5f02316d] \ud83d\uddbc\ufe0f Chargement image captur\u00e9e...", "timestamp": "2026-05-06T09:42:00.938573", "module": "FaceRecognition", "function": "verify", "line": 282, "level": "DEBUG"}
+{"message": "[5f02316d] \u2705 Image charg\u00e9e: (600, 800)", "timestamp": "2026-05-06T09:42:01.074165", "module": "FaceRecognition", "function": "verify", "line": 285, "level": "DEBUG"}
+{"message": "[5f02316d] \ud83e\udde0 Extraction embedding selfie...", "timestamp": "2026-05-06T09:42:01.076215", "module": "FaceRecognition", "function": "verify", "line": 290, "level": "DEBUG"}
+{"message": "[5f02316d] \ud83d\udd04 Correction EXIF...", "timestamp": "2026-05-06T09:42:01.077232", "module": "FaceRecognition", "function": "extract_embedding", "line": 188, "level": "DEBUG"}
+{"message": "[5f02316d] \ud83d\udcd0 Taille originale: (600, 800)", "timestamp": "2026-05-06T09:42:01.077738", "module": "FaceRecognition", "function": "extract_embedding", "line": 192, "level": "DEBUG"}
+{"message": "[5f02316d] \ud83c\udfaf D\u00e9tection MTCNN...", "timestamp": "2026-05-06T09:42:01.079249", "module": "FaceRecognition", "function": "extract_embedding", "line": 200, "level": "DEBUG"}
+{"message": "[5f02316d] \u2705 1 visage(s) d\u00e9tect\u00e9(s)", "timestamp": "2026-05-06T09:42:02.512123", "module": "FaceRecognition", "function": "extract_embedding", "line": 207, "level": "INFO"}
+{"message": "[5f02316d] \ud83d\udcca Confiances: ['100.00%']", "timestamp": "2026-05-06T09:42:02.513633", "module": "FaceRecognition", "function": "extract_embedding", "line": 208, "level": "DEBUG"}
+{"message": "[5f02316d] \ud83c\udfac Extraction du premier visage...", "timestamp": "2026-05-06T09:42:02.514645", "module": "FaceRecognition", "function": "extract_embedding", "line": 210, "level": "DEBUG"}
+{"message": "[5f02316d] \u2705 Visage extrait: torch.Size([3, 160, 160])", "timestamp": "2026-05-06T09:42:02.527560", "module": "FaceRecognition", "function": "extract_embedding", "line": 212, "level": "DEBUG"}
+{"message": "[5f02316d] \ud83e\udde0 Calcul embedding ResNet...", "timestamp": "2026-05-06T09:42:02.528064", "module": "FaceRecognition", "function": "extract_embedding", "line": 214, "level": "DEBUG"}
+{"message": "[5f02316d] \u2705 Embedding g\u00e9n\u00e9r\u00e9 (512 dimensions)", "timestamp": "2026-05-06T09:42:02.815007", "module": "FaceRecognition", "function": "extract_embedding", "line": 219, "level": "INFO"}
+{"message": "[5f02316d] \u2705 Embedding selfie g\u00e9n\u00e9r\u00e9", "timestamp": "2026-05-06T09:42:02.816020", "module": "FaceRecognition", "function": "verify", "line": 298, "level": "INFO"}
+{"message": "[5f02316d] \ud83d\udce5 R\u00e9cup\u00e9ration profil...", "timestamp": "2026-05-06T09:42:02.817526", "module": "FaceRecognition", "function": "verify", "line": 301, "level": "DEBUG"}
+{"message": "[ac3a173a] \ud83d\udce5 R\u00e9cup\u00e9ration profil: http://172.16.1.20:8000/storage/companies/imrasoft/documents/employee/face_image_J312012.png", "timestamp": "2026-05-06T09:42:02.818537", "module": "FaceRecognition", "function": "get_cached_profile_embedding", "line": 149, "level": "DEBUG"}
+{"message": "[ac3a173a] \ud83c\udf10 Requ\u00eate HTTP...", "timestamp": "2026-05-06T09:42:02.819061", "module": "FaceRecognition", "function": "get_cached_profile_embedding", "line": 152, "level": "DEBUG"}
+{"message": "[ac3a173a] \u2705 R\u00e9ponse re\u00e7ue (324083 bytes)", "timestamp": "2026-05-06T09:42:03.201605", "module": "FaceRecognition", "function": "get_cached_profile_embedding", "line": 159, "level": "DEBUG"}
+{"message": "[ac3a173a] \ud83d\uddbc\ufe0f Chargement image...", "timestamp": "2026-05-06T09:42:03.203121", "module": "FaceRecognition", "function": "get_cached_profile_embedding", "line": 161, "level": "DEBUG"}
+{"message": "[ac3a173a] \u2705 Image charg\u00e9e: (800, 800)", "timestamp": "2026-05-06T09:42:03.216075", "module": "FaceRecognition", "function": "get_cached_profile_embedding", "line": 163, "level": "DEBUG"}
+{"message": "[ac3a173a] \ud83e\udde0 Extraction embedding...", "timestamp": "2026-05-06T09:42:03.217077", "module": "FaceRecognition", "function": "get_cached_profile_embedding", "line": 165, "level": "DEBUG"}
+{"message": "[ac3a173a] \ud83d\udd04 Correction EXIF...", "timestamp": "2026-05-06T09:42:03.217077", "module": "FaceRecognition", "function": "extract_embedding", "line": 188, "level": "DEBUG"}
+{"message": "[ac3a173a] \ud83d\udcd0 Taille originale: (800, 800)", "timestamp": "2026-05-06T09:42:03.220147", "module": "FaceRecognition", "function": "extract_embedding", "line": 192, "level": "DEBUG"}
+{"message": "[ac3a173a] \ud83c\udfaf D\u00e9tection MTCNN...", "timestamp": "2026-05-06T09:42:03.221130", "module": "FaceRecognition", "function": "extract_embedding", "line": 200, "level": "DEBUG"}
+{"message": "[ac3a173a] \u2705 1 visage(s) d\u00e9tect\u00e9(s)", "timestamp": "2026-05-06T09:42:03.402305", "module": "FaceRecognition", "function": "extract_embedding", "line": 207, "level": "INFO"}
+{"message": "[ac3a173a] \ud83d\udcca Confiances: ['100.00%']", "timestamp": "2026-05-06T09:42:03.403304", "module": "FaceRecognition", "function": "extract_embedding", "line": 208, "level": "DEBUG"}
+{"message": "[ac3a173a] \ud83c\udfac Extraction du premier visage...", "timestamp": "2026-05-06T09:42:03.403304", "module": "FaceRecognition", "function": "extract_embedding", "line": 210, "level": "DEBUG"}
+{"message": "[ac3a173a] \u2705 Visage extrait: torch.Size([3, 160, 160])", "timestamp": "2026-05-06T09:42:03.407509", "module": "FaceRecognition", "function": "extract_embedding", "line": 212, "level": "DEBUG"}
+{"message": "[ac3a173a] \ud83e\udde0 Calcul embedding ResNet...", "timestamp": "2026-05-06T09:42:03.407509", "module": "FaceRecognition", "function": "extract_embedding", "line": 214, "level": "DEBUG"}
+{"message": "[ac3a173a] \u2705 Embedding g\u00e9n\u00e9r\u00e9 (512 dimensions)", "timestamp": "2026-05-06T09:42:03.452973", "module": "FaceRecognition", "function": "extract_embedding", "line": 219, "level": "INFO"}
+{"message": "[ac3a173a] \u2705 Profil trait\u00e9 avec succ\u00e8s", "timestamp": "2026-05-06T09:42:03.455555", "module": "FaceRecognition", "function": "get_cached_profile_embedding", "line": 169, "level": "INFO"}
+{"message": "[5f02316d] \u2705 Profil charg\u00e9", "timestamp": "2026-05-06T09:42:03.456548", "module": "FaceRecognition", "function": "verify", "line": 308, "level": "INFO"}
+{"message": "[5f02316d] \ud83d\udd22 Calcul similarit\u00e9 (cosinus)...", "timestamp": "2026-05-06T09:42:03.457546", "module": "FaceRecognition", "function": "verify", "line": 311, "level": "DEBUG"}
+{"message": "[5f02316d] \u2705 Similarit\u00e9 calcul\u00e9e: 0.2068", "timestamp": "2026-05-06T09:42:03.458549", "module": "FaceRecognition", "function": "verify", "line": 314, "level": "DEBUG"}
+{"message": "[5f02316d] \ud83d\udcca Threshold: 0.65 | R\u00e9sultat: 0.2068 >= 0.65 = False", "timestamp": "2026-05-06T09:42:03.460052", "module": "FaceRecognition", "function": "verify", "line": 320, "level": "DEBUG"}
+{"message": "[5f02316d] \u274c V\u00c9RIFICATION REJET\u00c9E", "timestamp": "2026-05-06T09:42:03.461065", "module": "FaceRecognition", "function": "verify", "line": 329, "level": "WARNING"}
+{"message": "[5f02316d] \u23f1\ufe0f  Temps total: 2533ms", "timestamp": "2026-05-06T09:42:03.463059", "module": "FaceRecognition", "function": "verify", "line": 332, "level": "INFO"}
+{"message": "[5f02316d] \ud83d\udcc8 Stats session: 0/1 accept\u00e9es, 1 rejet\u00e9es, 0 sans visage", "timestamp": "2026-05-06T09:42:03.464134", "module": "FaceRecognition", "function": "verify", "line": 333, "level": "INFO"}
+{"message": "================================================================================\n", "timestamp": "2026-05-06T09:42:03.464650", "module": "FaceRecognition", "function": "verify", "line": 334, "level": "INFO"}
