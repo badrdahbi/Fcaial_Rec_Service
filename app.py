@@ -1,4 +1,5 @@
 import base64
+import os
 import numpy as np
 import torch
 import time
@@ -9,6 +10,10 @@ from flask_cors import CORS
 from facenet_pytorch import MTCNN, InceptionResnetV1
 from PIL import Image, ImageOps, ImageEnhance
 import io
+import sys
+
+# Assurer que le dossier courant est dans sys.path pour importer embeddings.py
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 from embeddings import extract_embedding_from_image
 
 # ==================== LOGGER SETUP ====================

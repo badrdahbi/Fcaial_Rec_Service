@@ -27,8 +27,9 @@ RUN pip install --no-cache-dir \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+
 # 6. Copier le code source
-COPY app.py .
+COPY . .
 
 # 7. Pré-télécharger le modèle FaceNet (évite le délai au 1er appel)
 #    Les modèles sont mis en cache dans ~/.cache/torch/

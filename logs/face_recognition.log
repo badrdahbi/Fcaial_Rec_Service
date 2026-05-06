@@ -239,3 +239,112 @@
 [32m[2026-05-06 15:15:18.324] [  INFO  ] [FaceRecognition:verify:311] [0m[4d995460] 📈 Stats session: 0/1 acceptées, 1 rejetées, 0 sans visage
 [32m[2026-05-06 15:15:18.325] [  INFO  ] [FaceRecognition:verify:312] [0m================================================================================
 
+[32m[2026-05-06 15:21:53.782] [  INFO  ] [FaceRecognition:<module>:118] [0m
+[32m[2026-05-06 15:21:53.783] [  INFO  ] [FaceRecognition:<module>:119] [0m================================================================================
+[32m[2026-05-06 15:21:53.783] [  INFO  ] [FaceRecognition:<module>:120] [0m🚀 RECONNAISSANCE FACIALE — INITIALISATION
+[32m[2026-05-06 15:21:53.784] [  INFO  ] [FaceRecognition:<module>:121] [0m================================================================================
+[32m[2026-05-06 15:21:53.785] [  INFO  ] [FaceRecognition:<module>:122] [0m🖥️  Périphérique : cuda
+[36m[2026-05-06 15:21:53.785] [ DEBUG  ] [FaceRecognition:<module>:125] [0m📦 Chargement MTCNN...
+[32m[2026-05-06 15:21:53.877] [  INFO  ] [FaceRecognition:<module>:127] [0m✅ MTCNN chargé
+[36m[2026-05-06 15:21:53.877] [ DEBUG  ] [FaceRecognition:<module>:129] [0m📦 Chargement InceptionResnetV1...
+[32m[2026-05-06 15:21:54.223] [  INFO  ] [FaceRecognition:<module>:131] [0m✅ ResNet chargé
+[32m[2026-05-06 15:21:54.224] [  INFO  ] [FaceRecognition:<module>:133] [0m================================================================================
+[32m[2026-05-06 15:21:54.225] [  INFO  ] [FaceRecognition:<module>:134] [0m✅ Modèles IA chargés et prêts !
+[32m[2026-05-06 15:21:54.225] [  INFO  ] [FaceRecognition:<module>:135] [0m================================================================================
+
+[32m[2026-05-06 15:21:54.227] [  INFO  ] [FaceRecognition:<module>:386] [0m🚀 Démarrage du serveur Flask...
+[32m[2026-05-06 15:21:54.227] [  INFO  ] [FaceRecognition:<module>:387] [0m📍 http://0.0.0.0:5000
+[32m[2026-05-06 15:22:05.947] [  INFO  ] [FaceRecognition:verify:222] [0m================================================================================
+[32m[2026-05-06 15:22:05.948] [  INFO  ] [FaceRecognition:verify:223] [0m[b968ebf0] 📨 Nouvelle requête /verify
+[32m[2026-05-06 15:22:05.949] [  INFO  ] [FaceRecognition:verify:224] [0m================================================================================
+[36m[2026-05-06 15:22:05.949] [ DEBUG  ] [FaceRecognition:verify:228] [0m[b968ebf0] 🔍 Validation des données...
+[32m[2026-05-06 15:22:05.951] [  INFO  ] [FaceRecognition:verify:244] [0m[b968ebf0] ✅ Données valides
+[36m[2026-05-06 15:22:05.952] [ DEBUG  ] [FaceRecognition:verify:251] [0m[b968ebf0] 📋 Paramètres:
+[36m[2026-05-06 15:22:05.953] [ DEBUG  ] [FaceRecognition:verify:252] [0m[b968ebf0]   - card_id: 11223344
+[36m[2026-05-06 15:22:05.954] [ DEBUG  ] [FaceRecognition:verify:253] [0m[b968ebf0]   - threshold: 0.65
+[36m[2026-05-06 15:22:05.954] [ DEBUG  ] [FaceRecognition:verify:254] [0m[b968ebf0]   - profile_image: 133858 chars
+[36m[2026-05-06 15:22:05.955] [ DEBUG  ] [FaceRecognition:verify:255] [0m[b968ebf0]   - face_image: 100884 chars
+[36m[2026-05-06 15:22:05.956] [ DEBUG  ] [FaceRecognition:verify:258] [0m[b968ebf0] 📸 Décodage selfie...
+[36m[2026-05-06 15:22:05.957] [ DEBUG  ] [FaceRecognition:decode_base64_image:160] [0m[b968ebf0] ✅ Décodage Base64 OK (selfie: 75661 bytes)
+[36m[2026-05-06 15:22:05.976] [ DEBUG  ] [FaceRecognition:decode_base64_image:167] [0m[b968ebf0] ✅ Image chargée (selfie): (600, 800)
+[36m[2026-05-06 15:22:05.977] [ DEBUG  ] [FaceRecognition:verify:263] [0m[b968ebf0] 🧠 Extraction embedding selfie...
+[36m[2026-05-06 15:22:05.979] [ DEBUG  ] [FaceRecognition:extract_embedding:177] [0m[b968ebf0] 🔄 Correction EXIF...
+[36m[2026-05-06 15:22:05.980] [ DEBUG  ] [FaceRecognition:extract_embedding:181] [0m[b968ebf0] 📐 Taille originale: (600, 800)
+[36m[2026-05-06 15:22:05.981] [ DEBUG  ] [FaceRecognition:extract_embedding:189] [0m[b968ebf0] 🎯 Détection MTCNN...
+[32m[2026-05-06 15:22:06.530] [  INFO  ] [FaceRecognition:extract_embedding:196] [0m[b968ebf0] ✅ 1 visage(s) détecté(s)
+[36m[2026-05-06 15:22:06.530] [ DEBUG  ] [FaceRecognition:extract_embedding:197] [0m[b968ebf0] 📊 Confiances: ['100.00%']
+[36m[2026-05-06 15:22:06.531] [ DEBUG  ] [FaceRecognition:extract_embedding:199] [0m[b968ebf0] 🎬 Extraction du premier visage...
+[36m[2026-05-06 15:22:06.536] [ DEBUG  ] [FaceRecognition:extract_embedding:201] [0m[b968ebf0] ✅ Visage extrait: torch.Size([3, 160, 160])
+[36m[2026-05-06 15:22:06.536] [ DEBUG  ] [FaceRecognition:extract_embedding:203] [0m[b968ebf0] 🧠 Calcul embedding ResNet...
+[32m[2026-05-06 15:22:06.689] [  INFO  ] [FaceRecognition:extract_embedding:208] [0m[b968ebf0] ✅ Embedding généré (512 dimensions)
+[32m[2026-05-06 15:22:06.689] [  INFO  ] [FaceRecognition:verify:271] [0m[b968ebf0] ✅ Embedding selfie généré
+[36m[2026-05-06 15:22:06.690] [ DEBUG  ] [FaceRecognition:verify:274] [0m[b968ebf0] 🖼️ Décodage image de profil (Base64)...
+[36m[2026-05-06 15:22:06.690] [ DEBUG  ] [FaceRecognition:decode_base64_image:156] [0m[b968ebf0] ✅ Data URI nettoyé (profil)
+[36m[2026-05-06 15:22:06.693] [ DEBUG  ] [FaceRecognition:decode_base64_image:160] [0m[b968ebf0] ✅ Décodage Base64 OK (profil: 100377 bytes)
+[36m[2026-05-06 15:22:06.694] [ DEBUG  ] [FaceRecognition:decode_base64_image:167] [0m[b968ebf0] ✅ Image chargée (profil): (350, 254)
+[36m[2026-05-06 15:22:06.696] [ DEBUG  ] [FaceRecognition:verify:279] [0m[b968ebf0] 🧠 Extraction embedding profil...
+[36m[2026-05-06 15:22:06.696] [ DEBUG  ] [FaceRecognition:extract_embedding:177] [0m[b968ebf0] 🔄 Correction EXIF...
+[36m[2026-05-06 15:22:06.697] [ DEBUG  ] [FaceRecognition:extract_embedding:181] [0m[b968ebf0] 📐 Taille originale: (350, 254)
+[36m[2026-05-06 15:22:06.698] [ DEBUG  ] [FaceRecognition:extract_embedding:189] [0m[b968ebf0] 🎯 Détection MTCNN...
+[32m[2026-05-06 15:22:06.825] [  INFO  ] [FaceRecognition:extract_embedding:196] [0m[b968ebf0] ✅ 1 visage(s) détecté(s)
+[36m[2026-05-06 15:22:06.826] [ DEBUG  ] [FaceRecognition:extract_embedding:197] [0m[b968ebf0] 📊 Confiances: ['100.00%']
+[36m[2026-05-06 15:22:06.826] [ DEBUG  ] [FaceRecognition:extract_embedding:199] [0m[b968ebf0] 🎬 Extraction du premier visage...
+[36m[2026-05-06 15:22:06.829] [ DEBUG  ] [FaceRecognition:extract_embedding:201] [0m[b968ebf0] ✅ Visage extrait: torch.Size([3, 160, 160])
+[36m[2026-05-06 15:22:06.829] [ DEBUG  ] [FaceRecognition:extract_embedding:203] [0m[b968ebf0] 🧠 Calcul embedding ResNet...
+[32m[2026-05-06 15:22:06.868] [  INFO  ] [FaceRecognition:extract_embedding:208] [0m[b968ebf0] ✅ Embedding généré (512 dimensions)
+[32m[2026-05-06 15:22:06.868] [  INFO  ] [FaceRecognition:verify:286] [0m[b968ebf0] ✅ Profil traité
+[36m[2026-05-06 15:22:06.869] [ DEBUG  ] [FaceRecognition:verify:289] [0m[b968ebf0] 🔢 Calcul similarité (cosinus)...
+[36m[2026-05-06 15:22:06.870] [ DEBUG  ] [FaceRecognition:verify:292] [0m[b968ebf0] ✅ Similarité calculée: 0.0364
+[36m[2026-05-06 15:22:06.871] [ DEBUG  ] [FaceRecognition:verify:298] [0m[b968ebf0] 📊 Threshold: 0.65 | Résultat: 0.0364 >= 0.65 = False
+[33m[2026-05-06 15:22:06.871] [WARNING ] [FaceRecognition:verify:307] [0m[b968ebf0] ❌ VÉRIFICATION REJETÉE
+[32m[2026-05-06 15:22:06.872] [  INFO  ] [FaceRecognition:verify:310] [0m[b968ebf0] ⏱️  Temps total: 926ms
+[32m[2026-05-06 15:22:06.874] [  INFO  ] [FaceRecognition:verify:311] [0m[b968ebf0] 📈 Stats session: 0/1 acceptées, 1 rejetées, 0 sans visage
+[32m[2026-05-06 15:22:06.875] [  INFO  ] [FaceRecognition:verify:312] [0m================================================================================
+
+[32m[2026-05-06 15:22:11.830] [  INFO  ] [FaceRecognition:verify:222] [0m================================================================================
+[32m[2026-05-06 15:22:11.831] [  INFO  ] [FaceRecognition:verify:223] [0m[b6dbe8b6] 📨 Nouvelle requête /verify
+[32m[2026-05-06 15:22:11.832] [  INFO  ] [FaceRecognition:verify:224] [0m================================================================================
+[36m[2026-05-06 15:22:11.832] [ DEBUG  ] [FaceRecognition:verify:228] [0m[b6dbe8b6] 🔍 Validation des données...
+[32m[2026-05-06 15:22:11.834] [  INFO  ] [FaceRecognition:verify:244] [0m[b6dbe8b6] ✅ Données valides
+[36m[2026-05-06 15:22:11.834] [ DEBUG  ] [FaceRecognition:verify:251] [0m[b6dbe8b6] 📋 Paramètres:
+[36m[2026-05-06 15:22:11.835] [ DEBUG  ] [FaceRecognition:verify:252] [0m[b6dbe8b6]   - card_id: 11223344
+[36m[2026-05-06 15:22:11.835] [ DEBUG  ] [FaceRecognition:verify:253] [0m[b6dbe8b6]   - threshold: 0.65
+[36m[2026-05-06 15:22:11.836] [ DEBUG  ] [FaceRecognition:verify:254] [0m[b6dbe8b6]   - profile_image: 133858 chars
+[36m[2026-05-06 15:22:11.837] [ DEBUG  ] [FaceRecognition:verify:255] [0m[b6dbe8b6]   - face_image: 100884 chars
+[36m[2026-05-06 15:22:11.837] [ DEBUG  ] [FaceRecognition:verify:258] [0m[b6dbe8b6] 📸 Décodage selfie...
+[36m[2026-05-06 15:22:11.839] [ DEBUG  ] [FaceRecognition:decode_base64_image:160] [0m[b6dbe8b6] ✅ Décodage Base64 OK (selfie: 75661 bytes)
+[36m[2026-05-06 15:22:11.843] [ DEBUG  ] [FaceRecognition:decode_base64_image:167] [0m[b6dbe8b6] ✅ Image chargée (selfie): (600, 800)
+[36m[2026-05-06 15:22:11.843] [ DEBUG  ] [FaceRecognition:verify:263] [0m[b6dbe8b6] 🧠 Extraction embedding selfie...
+[36m[2026-05-06 15:22:11.844] [ DEBUG  ] [FaceRecognition:extract_embedding:177] [0m[b6dbe8b6] 🔄 Correction EXIF...
+[36m[2026-05-06 15:22:11.844] [ DEBUG  ] [FaceRecognition:extract_embedding:181] [0m[b6dbe8b6] 📐 Taille originale: (600, 800)
+[36m[2026-05-06 15:22:11.846] [ DEBUG  ] [FaceRecognition:extract_embedding:189] [0m[b6dbe8b6] 🎯 Détection MTCNN...
+[32m[2026-05-06 15:22:12.160] [  INFO  ] [FaceRecognition:extract_embedding:196] [0m[b6dbe8b6] ✅ 1 visage(s) détecté(s)
+[36m[2026-05-06 15:22:12.161] [ DEBUG  ] [FaceRecognition:extract_embedding:197] [0m[b6dbe8b6] 📊 Confiances: ['100.00%']
+[36m[2026-05-06 15:22:12.162] [ DEBUG  ] [FaceRecognition:extract_embedding:199] [0m[b6dbe8b6] 🎬 Extraction du premier visage...
+[36m[2026-05-06 15:22:12.166] [ DEBUG  ] [FaceRecognition:extract_embedding:201] [0m[b6dbe8b6] ✅ Visage extrait: torch.Size([3, 160, 160])
+[36m[2026-05-06 15:22:12.168] [ DEBUG  ] [FaceRecognition:extract_embedding:203] [0m[b6dbe8b6] 🧠 Calcul embedding ResNet...
+[32m[2026-05-06 15:22:12.314] [  INFO  ] [FaceRecognition:extract_embedding:208] [0m[b6dbe8b6] ✅ Embedding généré (512 dimensions)
+[32m[2026-05-06 15:22:12.316] [  INFO  ] [FaceRecognition:verify:271] [0m[b6dbe8b6] ✅ Embedding selfie généré
+[36m[2026-05-06 15:22:12.318] [ DEBUG  ] [FaceRecognition:verify:274] [0m[b6dbe8b6] 🖼️ Décodage image de profil (Base64)...
+[36m[2026-05-06 15:22:12.320] [ DEBUG  ] [FaceRecognition:decode_base64_image:156] [0m[b6dbe8b6] ✅ Data URI nettoyé (profil)
+[36m[2026-05-06 15:22:12.323] [ DEBUG  ] [FaceRecognition:decode_base64_image:160] [0m[b6dbe8b6] ✅ Décodage Base64 OK (profil: 100377 bytes)
+[36m[2026-05-06 15:22:12.326] [ DEBUG  ] [FaceRecognition:decode_base64_image:167] [0m[b6dbe8b6] ✅ Image chargée (profil): (350, 254)
+[36m[2026-05-06 15:22:12.329] [ DEBUG  ] [FaceRecognition:verify:279] [0m[b6dbe8b6] 🧠 Extraction embedding profil...
+[36m[2026-05-06 15:22:12.330] [ DEBUG  ] [FaceRecognition:extract_embedding:177] [0m[b6dbe8b6] 🔄 Correction EXIF...
+[36m[2026-05-06 15:22:12.332] [ DEBUG  ] [FaceRecognition:extract_embedding:181] [0m[b6dbe8b6] 📐 Taille originale: (350, 254)
+[36m[2026-05-06 15:22:12.333] [ DEBUG  ] [FaceRecognition:extract_embedding:189] [0m[b6dbe8b6] 🎯 Détection MTCNN...
+[32m[2026-05-06 15:22:12.510] [  INFO  ] [FaceRecognition:extract_embedding:196] [0m[b6dbe8b6] ✅ 1 visage(s) détecté(s)
+[36m[2026-05-06 15:22:12.512] [ DEBUG  ] [FaceRecognition:extract_embedding:197] [0m[b6dbe8b6] 📊 Confiances: ['100.00%']
+[36m[2026-05-06 15:22:12.514] [ DEBUG  ] [FaceRecognition:extract_embedding:199] [0m[b6dbe8b6] 🎬 Extraction du premier visage...
+[36m[2026-05-06 15:22:12.515] [ DEBUG  ] [FaceRecognition:extract_embedding:201] [0m[b6dbe8b6] ✅ Visage extrait: torch.Size([3, 160, 160])
+[36m[2026-05-06 15:22:12.516] [ DEBUG  ] [FaceRecognition:extract_embedding:203] [0m[b6dbe8b6] 🧠 Calcul embedding ResNet...
+[32m[2026-05-06 15:22:12.580] [  INFO  ] [FaceRecognition:extract_embedding:208] [0m[b6dbe8b6] ✅ Embedding généré (512 dimensions)
+[32m[2026-05-06 15:22:12.581] [  INFO  ] [FaceRecognition:verify:286] [0m[b6dbe8b6] ✅ Profil traité
+[36m[2026-05-06 15:22:12.582] [ DEBUG  ] [FaceRecognition:verify:289] [0m[b6dbe8b6] 🔢 Calcul similarité (cosinus)...
+[36m[2026-05-06 15:22:12.583] [ DEBUG  ] [FaceRecognition:verify:292] [0m[b6dbe8b6] ✅ Similarité calculée: 0.0364
+[36m[2026-05-06 15:22:12.584] [ DEBUG  ] [FaceRecognition:verify:298] [0m[b6dbe8b6] 📊 Threshold: 0.65 | Résultat: 0.0364 >= 0.65 = False
+[33m[2026-05-06 15:22:12.585] [WARNING ] [FaceRecognition:verify:307] [0m[b6dbe8b6] ❌ VÉRIFICATION REJETÉE
+[32m[2026-05-06 15:22:12.588] [  INFO  ] [FaceRecognition:verify:310] [0m[b6dbe8b6] ⏱️  Temps total: 757ms
+[32m[2026-05-06 15:22:12.589] [  INFO  ] [FaceRecognition:verify:311] [0m[b6dbe8b6] 📈 Stats session: 0/2 acceptées, 2 rejetées, 0 sans visage
+[32m[2026-05-06 15:22:12.591] [  INFO  ] [FaceRecognition:verify:312] [0m================================================================================
+
